@@ -40,6 +40,7 @@ HTMLParserOptions::HTMLParserOptions()
     , enhancedSelect(false)
     , enhancedSelectQuirk(false)
     , processingInstructionEnabled(false)
+    , templateForEnabled(false)
     , maximumDOMTreeDepth(Settings::defaultMaximumHTMLParserDOMTreeDepth)
 {
 }
@@ -56,6 +57,7 @@ HTMLParserOptions::HTMLParserOptions(Document& document)
     enhancedSelect = document.settings().htmlEnhancedSelectParsingEnabled();
     enhancedSelectQuirk = document.settings().htmlEnhancedSelectParsingQuirkEnabled();
     processingInstructionEnabled = document.settings().htmlProcessingInstructionEnabled();
+    templateForEnabled = document.settings().htmlTemplateForEnabled();
     maximumDOMTreeDepth = document.settings().maximumHTMLParserDOMTreeDepth();
 }
 

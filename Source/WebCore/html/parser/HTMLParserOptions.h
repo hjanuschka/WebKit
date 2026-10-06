@@ -40,6 +40,7 @@ public:
     bool enhancedSelect;
     bool enhancedSelectQuirk;
     bool processingInstructionEnabled;
+    bool templateForEnabled;
     unsigned maximumDOMTreeDepth;
 };
 
