@@ -1,29 +1,35 @@
 
-FAIL Modifying a Sanitizer instance does not change subsequent new Sanitizer() instances Can't find variable: Sanitizer
-FAIL allowElement() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL removeElement() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL replaceElementWithChildren() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL allowAttribute() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL removeAttribute() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL allowProcessingInstruction() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL removeProcessingInstruction() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL setComments() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL setDataAttributes() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL removeUnsafe() on new Sanitizer() does not affect subsequent instances Can't find variable: Sanitizer
-FAIL Mutating the object returned by sanitizer.get() does not affect the Sanitizer or default configuration Can't find variable: Sanitizer
-FAIL Repeated calls to sanitizer.get() return distinct object copies Can't find variable: Sanitizer
-FAIL Modifying a Sanitizer after removeUnsafe() does not change the built-in safe baseline configuration Can't find variable: Sanitizer
-FAIL Mutating config returned from baseline sanitizer does not affect subsequent removeUnsafe() calls Can't find variable: Sanitizer
-FAIL Modifying input configuration dictionary after new Sanitizer(config) does not affect the Sanitizer Can't find variable: Sanitizer
-FAIL Sanitization with Element.prototype.setHTML() does not change default base configuration Can't find variable: Sanitizer
+PASS Modifying a Sanitizer instance does not change subsequent new Sanitizer() instances
+PASS allowElement() on new Sanitizer() does not affect subsequent instances
+PASS removeElement() on new Sanitizer() does not affect subsequent instances
+PASS replaceElementWithChildren() on new Sanitizer() does not affect subsequent instances
+PASS allowAttribute() on new Sanitizer() does not affect subsequent instances
+PASS removeAttribute() on new Sanitizer() does not affect subsequent instances
+PASS allowProcessingInstruction() on new Sanitizer() does not affect subsequent instances
+PASS removeProcessingInstruction() on new Sanitizer() does not affect subsequent instances
+PASS setComments() on new Sanitizer() does not affect subsequent instances
+PASS setDataAttributes() on new Sanitizer() does not affect subsequent instances
+PASS removeUnsafe() on new Sanitizer() does not affect subsequent instances
+PASS Mutating the object returned by sanitizer.get() does not affect the Sanitizer or default configuration
+PASS Repeated calls to sanitizer.get() return distinct object copies
+PASS Modifying a Sanitizer after removeUnsafe() does not change the built-in safe baseline configuration
+PASS Mutating config returned from baseline sanitizer does not affect subsequent removeUnsafe() calls
+PASS Modifying input configuration dictionary after new Sanitizer(config) does not affect the Sanitizer
+FAIL Sanitization with Element.prototype.setHTML() does not change default base configuration div.setHTML is not a function. (In 'div.setHTML("<div><script>alert(1)<\/script><p onclick='alert(2)'>test</p><custom-el></custom-el></div>")', 'div.setHTML' is undefined)
 PASS Sanitization with Document.parseHTML() does not change default base configuration
-FAIL A modified Sanitizer used in setHTML() does not affect default configuration or other Sanitizers Can't find variable: Sanitizer
-FAIL s.get() is unchanged after Element.prototype.setHTML() when Sanitizer has unsafe allowlist entries Can't find variable: Sanitizer
-FAIL s.get() is unchanged after Element.prototype.setHTML() when Sanitizer has unsafe remove-list configuration Can't find variable: Sanitizer
+FAIL A modified Sanitizer used in setHTML() does not affect default configuration or other Sanitizers div.setHTML is not a function. (In 'div.setHTML("<div>hello</div><custom-tag>world</custom-tag>", { sanitizer: modified })', 'div.setHTML' is undefined)
+FAIL s.get() is unchanged after Element.prototype.setHTML() when Sanitizer has unsafe allowlist entries div.setHTML is not a function. (In 'div.setHTML(
+    "<div id='d' onclick='alert(1)' onload='alert(2)'><script>alert(3)<\/script><iframe id='f'></iframe><a id='link' href='javascript:alert(4)'>link</a></div>",
+    { sanitizer: s }
+  )', 'div.setHTML' is undefined)
+FAIL s.get() is unchanged after Element.prototype.setHTML() when Sanitizer has unsafe remove-list configuration div.setHTML is not a function. (In 'div.setHTML(
+    "<div onclick='alert(1)'><span>dropped</span><script>alert(2)<\/script><p>kept</p></div>",
+    { sanitizer: s }
+  )', 'div.setHTML' is undefined)
 PASS s.get() is unchanged after Document.parseHTML() when Sanitizer has unsafe entries
-FAIL Sanitization with appendHTML() does not change default base configuration or mutate passed Sanitizer Can't find variable: Sanitizer
-FAIL Sanitization with prependHTML() does not change default base configuration or mutate passed Sanitizer Can't find variable: Sanitizer
-FAIL Sanitization with beforeHTML() does not change default base configuration or mutate passed Sanitizer Can't find variable: Sanitizer
-FAIL Sanitization with afterHTML() does not change default base configuration or mutate passed Sanitizer Can't find variable: Sanitizer
-FAIL Sanitization with replaceWithHTML() does not change default base configuration or mutate passed Sanitizer Can't find variable: Sanitizer
+FAIL Sanitization with appendHTML() does not change default base configuration or mutate passed Sanitizer getReceiver()[method] is not a function. (In 'getReceiver()[method]("<div id='d'><script>alert(1)<\/script><p onclick='alert(2)'>test</p></div>")', 'getReceiver()[method]' is undefined)
+FAIL Sanitization with prependHTML() does not change default base configuration or mutate passed Sanitizer getReceiver()[method] is not a function. (In 'getReceiver()[method]("<div id='d'><script>alert(1)<\/script><p onclick='alert(2)'>test</p></div>")', 'getReceiver()[method]' is undefined)
+FAIL Sanitization with beforeHTML() does not change default base configuration or mutate passed Sanitizer getReceiver()[method] is not a function. (In 'getReceiver()[method]("<div id='d'><script>alert(1)<\/script><p onclick='alert(2)'>test</p></div>")', 'getReceiver()[method]' is undefined)
+FAIL Sanitization with afterHTML() does not change default base configuration or mutate passed Sanitizer getReceiver()[method] is not a function. (In 'getReceiver()[method]("<div id='d'><script>alert(1)<\/script><p onclick='alert(2)'>test</p></div>")', 'getReceiver()[method]' is undefined)
+FAIL Sanitization with replaceWithHTML() does not change default base configuration or mutate passed Sanitizer getReceiver()[method] is not a function. (In 'getReceiver()[method]("<div id='d'><script>alert(1)<\/script><p onclick='alert(2)'>test</p></div>")', 'getReceiver()[method]' is undefined)
 

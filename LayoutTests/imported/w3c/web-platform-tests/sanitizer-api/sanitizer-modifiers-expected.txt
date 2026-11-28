@@ -1,24 +1,24 @@
 
-FAIL sanitizer.allowAttribute() with global attributes Can't find variable: Sanitizer
-FAIL sanitizer.allowAttribute() with global removeAttributes Can't find variable: Sanitizer
-FAIL sanitizer.allowAttribute() with global attributes and elements Can't find variable: Sanitizer
-FAIL sanitizer.allowAttribute() with global removeAttributes and element's attributes Can't find variable: Sanitizer
-FAIL sanitizer.allowAttribute() with global removeAttributes and element's removeAttributes Can't find variable: Sanitizer
-FAIL sanitizer.removeAttribute() with global attributes Can't find variable: Sanitizer
-FAIL sanitizer.removeAttribute() with global removeAttributes Can't find variable: Sanitizer
-FAIL sanitizer.removeAttribute() with global attributes and elements Can't find variable: Sanitizer
-FAIL sanitizer.removeAttribute() with global removeAttributes and element's attributes Can't find variable: Sanitizer
-FAIL sanitizer.removeAttribute() with global removeAttributes and element's removeAttributes Can't find variable: Sanitizer
-FAIL sanitizer.removeElement() with global elements Can't find variable: Sanitizer
-FAIL sanitizer.removeElement() with global removeElements Can't find variable: Sanitizer
-FAIL sanitizer.replaceElementWithChildren() with global elements Can't find variable: Sanitizer
-FAIL sanitizer.replaceElementWithChildren() with global removeElements Can't find variable: Sanitizer
-FAIL sanitizer.allowElement() with global elements Can't find variable: Sanitizer
-FAIL sanitizer.allowElement() with global removeElements Can't find variable: Sanitizer
-FAIL sanitizer.allowElement() with global elements and attributes Can't find variable: Sanitizer
-FAIL sanitizer.allowElement() with global elements and removeAttributes Can't find variable: Sanitizer
-FAIL sanitizer.replaceElementWithChildren() does not allow non-replaceable elements. Can't find variable: Sanitizer
-FAIL sanitizer.setJavascriptURLs() Can't find variable: Sanitizer
-FAIL sanitizer.setComments() Can't find variable: Sanitizer
-FAIL sanitizer.setDataAttributes() Can't find variable: Sanitizer
+PASS sanitizer.allowAttribute() with global attributes
+PASS sanitizer.allowAttribute() with global removeAttributes
+PASS sanitizer.allowAttribute() with global attributes and elements
+PASS sanitizer.allowAttribute() with global removeAttributes and element's attributes
+PASS sanitizer.allowAttribute() with global removeAttributes and element's removeAttributes
+PASS sanitizer.removeAttribute() with global attributes
+PASS sanitizer.removeAttribute() with global removeAttributes
+PASS sanitizer.removeAttribute() with global attributes and elements
+PASS sanitizer.removeAttribute() with global removeAttributes and element's attributes
+PASS sanitizer.removeAttribute() with global removeAttributes and element's removeAttributes
+PASS sanitizer.removeElement() with global elements
+PASS sanitizer.removeElement() with global removeElements
+PASS sanitizer.replaceElementWithChildren() with global elements
+PASS sanitizer.replaceElementWithChildren() with global removeElements
+PASS sanitizer.allowElement() with global elements
+PASS sanitizer.allowElement() with global removeElements
+PASS sanitizer.allowElement() with global elements and attributes
+PASS sanitizer.allowElement() with global elements and removeAttributes
+PASS sanitizer.replaceElementWithChildren() does not allow non-replaceable elements.
+PASS sanitizer.setJavascriptURLs()
+PASS sanitizer.setComments()
+PASS sanitizer.setDataAttributes()
 

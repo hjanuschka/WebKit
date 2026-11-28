@@ -1482,6 +1482,7 @@ dom/QualifiedNameCache.cpp
 dom/RadioButtonGroups.cpp
 dom/Range.cpp
 dom/RejectedPromiseTracker.cpp
+dom/Sanitizer.cpp
 dom/Scheduler.cpp
 dom/ScopedEventQueue.cpp
 dom/ScriptElement.cpp
@@ -5193,6 +5194,13 @@ JSSVGUseElement.cpp
 JSSVGViewElement.cpp
 JSSVGViewSpec.cpp
 JSSVGZoomAndPan.cpp
+JSSanitizer.cpp
+JSSanitizerAttributeNamespace.cpp
+JSSanitizerConfig.cpp
+JSSanitizerElementNamespace.cpp
+JSSanitizerElementNamespaceWithAttributes.cpp
+JSSanitizerPresets.cpp
+JSSanitizerProcessingInstruction.cpp
 JSScheduler.cpp
 JSSchedulerPostTaskCallback.cpp
 JSSchedulerPostTaskOptions.cpp

@@ -1,11 +1,11 @@
 
-FAIL Sorting of attributes Can't find variable: Sanitizer
-FAIL Sorting of removeAttributes Can't find variable: Sanitizer
-FAIL Sorting of elements Can't find variable: Sanitizer
-FAIL Sorting of removeElements Can't find variable: Sanitizer
-FAIL Sorting of replaceWithChildrenElements Can't find variable: Sanitizer
-FAIL Sorting of element's attributes Can't find variable: Sanitizer
-FAIL Sorting of element's removeAttributes Can't find variable: Sanitizer
-FAIL Sorting of processingInstructions Can't find variable: Sanitizer
-FAIL Sorting of removeProcessingInstructions Can't find variable: Sanitizer
+PASS Sorting of attributes
+PASS Sorting of removeAttributes
+PASS Sorting of elements
+PASS Sorting of removeElements
+PASS Sorting of replaceWithChildrenElements
+PASS Sorting of element's attributes
+PASS Sorting of element's removeAttributes
+PASS Sorting of processingInstructions
+PASS Sorting of removeProcessingInstructions
 

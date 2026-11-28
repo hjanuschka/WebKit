@@ -1286,6 +1286,13 @@ JS_BINDING_IDLS := \
     $(WebCore)/dom/Range.idl \
     $(WebCore)/dom/ReducerCallback.idl \
     $(WebCore)/dom/RequestAnimationFrameCallback.idl \
+    $(WebCore)/dom/Sanitizer.idl \
+    $(WebCore)/dom/SanitizerAttributeNamespace.idl \
+    $(WebCore)/dom/SanitizerConfig.idl \
+    $(WebCore)/dom/SanitizerElementNamespace.idl \
+    $(WebCore)/dom/SanitizerElementNamespaceWithAttributes.idl \
+    $(WebCore)/dom/SanitizerPresets.idl \
+    $(WebCore)/dom/SanitizerProcessingInstruction.idl \
     $(WebCore)/dom/Scheduler.idl \
     $(WebCore)/dom/SchedulerPostTaskCallback.idl \
     $(WebCore)/dom/SchedulerPostTaskOptions.idl \

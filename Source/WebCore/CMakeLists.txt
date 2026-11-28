@@ -1239,6 +1239,13 @@ set(WebCore_NON_SVG_IDL_FILES
     dom/Range.idl
     dom/ReducerCallback.idl
     dom/RequestAnimationFrameCallback.idl
+    dom/Sanitizer.idl
+    dom/SanitizerAttributeNamespace.idl
+    dom/SanitizerConfig.idl
+    dom/SanitizerElementNamespace.idl
+    dom/SanitizerElementNamespaceWithAttributes.idl
+    dom/SanitizerPresets.idl
+    dom/SanitizerProcessingInstruction.idl
     dom/Scheduler.idl
     dom/SchedulerPostTaskCallback.idl
     dom/SchedulerPostTaskOptions.idl

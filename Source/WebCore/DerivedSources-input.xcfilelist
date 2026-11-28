@@ -1616,6 +1616,13 @@ $(PROJECT_DIR)/dom/Range+DOMParsing.idl
 $(PROJECT_DIR)/dom/Range.idl
 $(PROJECT_DIR)/dom/ReducerCallback.idl
 $(PROJECT_DIR)/dom/RequestAnimationFrameCallback.idl
+$(PROJECT_DIR)/dom/Sanitizer.idl
+$(PROJECT_DIR)/dom/SanitizerAttributeNamespace.idl
+$(PROJECT_DIR)/dom/SanitizerConfig.idl
+$(PROJECT_DIR)/dom/SanitizerElementNamespace.idl
+$(PROJECT_DIR)/dom/SanitizerElementNamespaceWithAttributes.idl
+$(PROJECT_DIR)/dom/SanitizerPresets.idl
+$(PROJECT_DIR)/dom/SanitizerProcessingInstruction.idl
 $(PROJECT_DIR)/dom/Scheduler.idl
 $(PROJECT_DIR)/dom/SchedulerPostTaskCallback.idl
 $(PROJECT_DIR)/dom/SchedulerPostTaskOptions.idl

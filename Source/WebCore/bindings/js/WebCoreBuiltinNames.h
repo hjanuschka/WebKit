@@ -426,6 +426,7 @@ namespace WebCore {
     macro(SQLResultSet) \
     macro(SQLResultSetRowList) \
     macro(SQLTransaction) \
+    macro(Sanitizer) \
     macro(Scheduler) \
     macro(ScreenLuminance) \
     macro(ScreenOrientation) \

@@ -233,7 +233,7 @@ FAIL Element.replaceWithHTMLUnsafe: default policy createParserOptions can overr
               { runScripts: true },
             )', 'receiver[method]' is undefined)
 FAIL TrustedTypePolicy.createParserOptions forwards extra arguments to callback policy.createParserOptions is not a function. (In 'policy.createParserOptions({}, "arg1", 42, { extra: true })', 'policy.createParserOptions' is undefined)
-FAIL TrustedTypePolicy.createParserOptions callback receives converted options dictionary Can't find variable: Sanitizer
+FAIL TrustedTypePolicy.createParserOptions callback receives converted options dictionary policy.createParserOptions is not a function. (In 'policy.createParserOptions({ runScripts: true, sanitizer })', 'policy.createParserOptions' is undefined)
 FAIL TrustedHTMLParserOptions applies runScripts option without exposing public members policy.createParserOptions is not a function. (In 'policy.createParserOptions({})', 'policy.createParserOptions' is undefined)
 PASS TrustedTypePolicy.createParserOptions returning something other than an object (number: 0) throws a TypeError
 FAIL Element.setHTMLUnsafe: default policy createParserOptions returning something other than an object (number: 0) throws a TypeError assert_throws_js: function "() => {
