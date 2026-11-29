@@ -1297,12 +1297,13 @@ ReportingScope& Document::ensureReportingScope()
     return *m_reportingScope;
 }
 
-void Document::setMarkupUnsafe(const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy)
+void Document::setMarkupUnsafe(const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy, RefPtr<ParserSanitizerConfiguration>&& sanitizer)
 {
     ASSERT(!hasChildNodes());
     auto policy = OptionSet<ParserContentPolicy> { ParserContentPolicy::AllowScriptingContent } | parserContentPolicy;
     setParserContentPolicy(policy);
-    if (this->contentType() == textHTMLContentTypeAtom()) {
+    m_parserSanitizerConfiguration = WTF::move(sanitizer);
+    if (!m_parserSanitizerConfiguration && this->contentType() == textHTMLContentTypeAtom()) {
         Ref html = HTMLHtmlElement::create(*this);
         Ref body = HTMLBodyElement::create(*this);
         html->appendChild(body);
@@ -1318,6 +1319,11 @@ void Document::setMarkupUnsafe(const String& markup, OptionSet<ParserContentPoli
     open();
     protect(parser())->appendSynchronously(markup.impl());
     close();
+}
+
+RefPtr<ParserSanitizerConfiguration> Document::takeParserSanitizerConfiguration()
+{
+    return std::exchange(m_parserSanitizerConfiguration, nullptr);
 }
 
 ExceptionOr<Ref<Document>> Document::parseHTMLUnsafe(Document& context, Variant<Ref<TrustedHTML>, String>&& html)

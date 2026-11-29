@@ -1625,7 +1625,7 @@ String urlToMarkup(const URL& url, const String& title)
 }
 
 enum class DocumentFragmentMode : bool { New, ReuseForInnerOuterHTML };
-static ALWAYS_INLINE ExceptionOr<Ref<DocumentFragment>> createFragmentForMarkup(Element& contextElement, const String& markup, DocumentFragmentMode mode, OptionSet<ParserContentPolicy> parserContentPolicy, CustomElementRegistry* registry = nullptr, Element::CustomElementRegistryKind registryKind = Element::CustomElementRegistryKind::Window)
+static ALWAYS_INLINE ExceptionOr<Ref<DocumentFragment>> createFragmentForMarkup(Element& contextElement, const String& markup, DocumentFragmentMode mode, OptionSet<ParserContentPolicy> parserContentPolicy, CustomElementRegistry* registry = nullptr, Element::CustomElementRegistryKind registryKind = Element::CustomElementRegistryKind::Window, RefPtr<ParserSanitizerConfiguration>&& sanitizer = nullptr)
 {
     Ref document = contextElement.hasTagName(templateTag) ? protect(contextElement.document())->ensureTemplateDocument() : contextElement.document();
     auto fragment = mode == DocumentFragmentMode::New ? DocumentFragment::create(document.get()) : document->documentFragmentForInnerOuterHTML();
@@ -1637,7 +1637,7 @@ static ALWAYS_INLINE ExceptionOr<Ref<DocumentFragment>> createFragmentForMarkup(
         fragment->resetCustomElementRegistryType();
 
     if (document->isHTMLDocument() || parserContentPolicy.contains(ParserContentPolicy::AlwaysParseAsHTML)) {
-        fragment->parseHTML(markup, contextElement, parserContentPolicy, registry);
+        fragment->parseHTML(markup, contextElement, parserContentPolicy, registry, WTF::move(sanitizer));
         return fragment;
     }
 
@@ -1647,9 +1647,9 @@ static ALWAYS_INLINE ExceptionOr<Ref<DocumentFragment>> createFragmentForMarkup(
     return fragment;
 }
 
-ExceptionOr<Ref<DocumentFragment>> createFragmentForInnerOuterHTML(Element& contextElement, const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy, CustomElementRegistry* registry, Element::CustomElementRegistryKind registryKind)
+ExceptionOr<Ref<DocumentFragment>> createFragmentForInnerOuterHTML(Element& contextElement, const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy, CustomElementRegistry* registry, Element::CustomElementRegistryKind registryKind, RefPtr<ParserSanitizerConfiguration>&& sanitizer)
 {
-    return createFragmentForMarkup(contextElement, markup, DocumentFragmentMode::ReuseForInnerOuterHTML, parserContentPolicy, registry, registryKind);
+    return createFragmentForMarkup(contextElement, markup, DocumentFragmentMode::ReuseForInnerOuterHTML, parserContentPolicy, registry, registryKind, WTF::move(sanitizer));
 }
 
 RefPtr<DocumentFragment> createFragmentForTransformToFragment(Document& outputDoc, String&& sourceString, const String& sourceMIMEType)
@@ -1716,7 +1716,7 @@ static void removeElementFromFragmentPreservingChildren(DocumentFragment& fragme
     fragment.removeChild(element);
 }
 
-ExceptionOr<Ref<DocumentFragment>> createContextualFragment(Element& element, const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy)
+ExceptionOr<Ref<DocumentFragment>> createContextualFragment(Element& element, const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy, RefPtr<ParserSanitizerConfiguration>&& sanitizer)
 {
     Ref registryContainer = [&] -> Ref<Node> {
         if (RefPtr templateElement = dynamicDowncast<HTMLTemplateElement>(element))
@@ -1724,7 +1724,7 @@ ExceptionOr<Ref<DocumentFragment>> createContextualFragment(Element& element, co
         return element;
     }();
     auto registryKind = registryContainer->usesNullCustomElementRegistry() ? Element::CustomElementRegistryKind::Null : Element::CustomElementRegistryKind::Window;
-    auto result = createFragmentForMarkup(element, markup, DocumentFragmentMode::New, parserContentPolicy, protect(CustomElementRegistry::registryForNodeOrTreeScope(registryContainer, protect(registryContainer->treeScope()))), registryKind);
+    auto result = createFragmentForMarkup(element, markup, DocumentFragmentMode::New, parserContentPolicy, protect(CustomElementRegistry::registryForNodeOrTreeScope(registryContainer, protect(registryContainer->treeScope()))), registryKind, WTF::move(sanitizer));
     if (result.hasException())
         return result.releaseException();
 

@@ -47,6 +47,7 @@
 #include <WebCore/MutationObserverOptions.h>
 #include <WebCore/OriginKeyed.h>
 #include <WebCore/PageIdentifier.h>
+#include <WebCore/ParserSanitizerConfiguration.h>
 #include <WebCore/PlaybackTargetClientContextIdentifier.h>
 #include <WebCore/PseudoElementIdentifier.h>
 #include <WebCore/QualifiedName.h>
@@ -546,8 +547,10 @@ public:
     bool shouldNotFireMutationEvents() const { return m_shouldNotFireMutationEvents; }
     void setShouldNotFireMutationEvents(bool fire) { m_shouldNotFireMutationEvents = fire; }
 
-    void setMarkupUnsafe(const String&, OptionSet<ParserContentPolicy>);
+    void setMarkupUnsafe(const String&, OptionSet<ParserContentPolicy>, RefPtr<ParserSanitizerConfiguration>&& = nullptr);
     static ExceptionOr<Ref<Document>> parseHTMLUnsafe(Document&, Variant<Ref<TrustedHTML>, String>&&);
+
+    RefPtr<ParserSanitizerConfiguration> takeParserSanitizerConfiguration();
 
     Element* elementForAccessKey(const String& key);
     inline void invalidateAccessKeyCache(); // Defined in DocumentInlines.h
@@ -2995,6 +2998,8 @@ private:
     static bool hasEverCreatedAnAXObjectCache;
 
     const RefPtr<ResizeObserver> m_resizeObserverForContainIntrinsicSize;
+
+    RefPtr<ParserSanitizerConfiguration> m_parserSanitizerConfiguration;
 
     const std::optional<FrameIdentifier> m_frameIdentifier;
     std::optional<bool> m_cachedCookiesEnabled;

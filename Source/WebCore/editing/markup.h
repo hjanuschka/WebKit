@@ -32,6 +32,7 @@
 #include <WebCore/MarkupExclusionRule.h>
 #include <WebCore/PageConfiguration.h>
 #include <WebCore/ParserContentPolicy.h>
+#include <WebCore/ParserSanitizerConfiguration.h>
 #include <WebCore/ShadowRoot.h>
 #include <wtf/Forward.h>
 #include <wtf/Function.h>
@@ -86,10 +87,10 @@ private:
 
 WEBCORE_EXPORT Ref<DocumentFragment> createFragmentFromText(const SimpleRange& context, const String& text);
 WEBCORE_EXPORT Ref<DocumentFragment> createFragmentFromMarkup(Document&, const String& markup, const String& baseURL, OptionSet<ParserContentPolicy> = { ParserContentPolicy::AllowScriptingContent });
-ExceptionOr<Ref<DocumentFragment>> createFragmentForInnerOuterHTML(Element&, const String& markup, OptionSet<ParserContentPolicy>, CustomElementRegistry*, Element::CustomElementRegistryKind = Element::CustomElementRegistryKind::Window);
+ExceptionOr<Ref<DocumentFragment>> createFragmentForInnerOuterHTML(Element&, const String& markup, OptionSet<ParserContentPolicy>, CustomElementRegistry*, Element::CustomElementRegistryKind = Element::CustomElementRegistryKind::Window, RefPtr<ParserSanitizerConfiguration>&& = nullptr);
 RefPtr<DocumentFragment> createFragmentForTransformToFragment(Document&, String&& sourceString, const String& sourceMIMEType);
 Ref<DocumentFragment> createFragmentForImageAndURL(Document&, const String&, PresentationSize preferredSize);
-ExceptionOr<Ref<DocumentFragment>> createContextualFragment(Element&, const String& markup, OptionSet<ParserContentPolicy>);
+ExceptionOr<Ref<DocumentFragment>> createContextualFragment(Element&, const String& markup, OptionSet<ParserContentPolicy>, RefPtr<ParserSanitizerConfiguration>&& = nullptr);
 
 bool isPlainTextMarkup(Node*);
 
