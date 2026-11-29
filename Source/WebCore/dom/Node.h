@@ -79,6 +79,7 @@ class TreeScope;
 class WebCoreOpaqueRoot;
 
 struct SerializedNode;
+struct SetHTMLOptions;
 
 enum class TextDirection : bool;
 
@@ -209,6 +210,10 @@ public:
     ExceptionOr<void> before(FixedVector<NodeOrString>&&);
     ExceptionOr<void> after(FixedVector<NodeOrString>&&);
     ExceptionOr<void> replaceWith(FixedVector<NodeOrString>&&);
+    ExceptionOr<void> beforeHTML(String&&, SetHTMLOptions&&);
+    ExceptionOr<void> afterHTML(String&&, SetHTMLOptions&&);
+    ExceptionOr<void> replaceWithHTML(String&&, SetHTMLOptions&&);
+    ExceptionOr<RefPtr<ContainerNode>> parentForHTMLInsertion();
     WEBCORE_EXPORT ExceptionOr<void> remove();
 
     // Other methods (not part of DOM)

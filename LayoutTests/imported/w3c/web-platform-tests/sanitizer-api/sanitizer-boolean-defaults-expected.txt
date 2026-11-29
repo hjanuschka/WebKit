@@ -1,5 +1,5 @@
 
-FAIL comments div.setHTML is not a function. (In 'div.setHTML("<!--bla-->", config)', 'div.setHTML' is undefined)
-FAIL data attributes div.setHTML is not a function. (In 'div.setHTML("<div data-foo='bar'>", config)', 'div.setHTML' is undefined)
-FAIL javascript URLs div.setHTML is not a function. (In 'div.setHTML("<a href='javascript:alert(1)'>", config)', 'div.setHTML' is undefined)
+FAIL comments assert_false: expected false got true
+FAIL data attributes assert_false: expected false got true
+FAIL javascript URLs assert_false: expected false got true
 

@@ -43,7 +43,9 @@
 #include "NotImplemented.h"
 #endif
 #include "RenderElement.h"
+#include "Sanitizer.h"
 #include "SerializedNode.h"
+#include "SetHTMLOptions.h"
 #include "Settings.h"
 #include "SlotAssignment.h"
 #include "StyleResolver.h"
@@ -213,7 +215,7 @@ StyleSheetList& ShadowRoot::styleSheets()
     return *m_styleSheetList;
 }
 
-ExceptionOr<void> ShadowRoot::replaceChildrenWithMarkup(const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy)
+ExceptionOr<void> ShadowRoot::replaceChildrenWithMarkup(const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy, RefPtr<ParserSanitizerConfiguration>&& sanitizer)
 {
     auto policy = OptionSet<ParserContentPolicy> { ParserContentPolicy::AllowScriptingContent } | parserContentPolicy;
 
@@ -223,7 +225,7 @@ ExceptionOr<void> ShadowRoot::replaceChildrenWithMarkup(const String& markup, Op
         return { };
     }
 
-    auto fragment = createFragmentForInnerOuterHTML(*protect(host()), markup, policy, protect(customElementRegistry()), usesNullCustomElementRegistry() ? Element::CustomElementRegistryKind::Null : Element::CustomElementRegistryKind::Window);
+    auto fragment = createFragmentForInnerOuterHTML(*protect(host()), markup, policy, protect(customElementRegistry()), usesNullCustomElementRegistry() ? Element::CustomElementRegistryKind::Null : Element::CustomElementRegistryKind::Window, WTF::move(sanitizer));
     if (fragment.hasException())
         return fragment.releaseException();
     bool usedFastPath = fragment.returnValue()->hasWasParsedWithFastPath();
@@ -231,6 +233,28 @@ ExceptionOr<void> ShadowRoot::replaceChildrenWithMarkup(const String& markup, Op
     if (!result.hasException() && usedFastPath)
         protect(document())->updateCachedSetInnerHTML(markup, *this, *protect(host()));
     return result;
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-shadowroot-sethtml
+ExceptionOr<void> ShadowRoot::setHTML(String&& html, SetHTMLOptions&& options)
+{
+    auto sanitizerOrException = Sanitizer::parserConfigurationFromOptions(WTF::move(options.sanitizer), true);
+    if (sanitizerOrException.hasException())
+        return sanitizerOrException.releaseException();
+
+    return replaceChildrenWithMarkup(html, { ParserContentPolicy::AllowDeclarativeShadowRoots, ParserContentPolicy::AlwaysParseAsHTML }, sanitizerOrException.releaseReturnValue());
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-shadowroot-appendhtml
+ExceptionOr<void> ShadowRoot::appendHTML(String&& html, SetHTMLOptions&& options)
+{
+    return filterAndPreInsertHTML(*this, nullptr, html, WTF::move(options));
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-shadowroot-prependhtml
+ExceptionOr<void> ShadowRoot::prependHTML(String&& html, SetHTMLOptions&& options)
+{
+    return filterAndPreInsertHTML(*this, protect(firstChild()).get(), html, WTF::move(options));
 }
 
 ExceptionOr<void> ShadowRoot::setHTMLUnsafe(Variant<Ref<TrustedHTML>, String>&& html)

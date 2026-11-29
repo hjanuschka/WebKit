@@ -275,6 +275,8 @@
 #include "ResolvedStyle.h"
 #include "ResourceLoadObserver.h"
 #include "ResourceMonitor.h"
+#include "Sanitizer.h"
+#include "SetHTMLOptions.h"
 #include "SVGDocument.h"
 #include "SVGDocumentExtensions.h"
 #include "SVGElementFactory.h"
@@ -1319,6 +1321,18 @@ void Document::setMarkupUnsafe(const String& markup, OptionSet<ParserContentPoli
     open();
     protect(parser())->appendSynchronously(markup.impl());
     close();
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-parsehtml
+ExceptionOr<Ref<Document>> Document::parseHTML(Document& context, String&& html, SetHTMLOptions&& options)
+{
+    auto sanitizerOrException = Sanitizer::parserConfigurationFromOptions(WTF::move(options.sanitizer), true);
+    if (sanitizerOrException.hasException())
+        return sanitizerOrException.releaseException();
+
+    Ref document = HTMLDocument::create(protect(context.contextDocument()), URL { }, context.securityOriginPolicy());
+    document->setMarkupUnsafe(html, { ParserContentPolicy::AllowDeclarativeShadowRoots }, sanitizerOrException.releaseReturnValue());
+    return { document };
 }
 
 RefPtr<ParserSanitizerConfiguration> Document::takeParserSanitizerConfiguration()

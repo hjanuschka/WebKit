@@ -41,6 +41,7 @@ typedef (HTMLScriptElement or SVGScriptElement) HTMLOrSVGScriptElement;
     [CallWith=CurrentDocument] constructor();
 
     [CallWith=CurrentDocument] static Document parseHTMLUnsafe((TrustedHTML or DOMString) html);
+    [CallWith=CurrentDocument, EnabledBySetting=SanitizerAPIEnabled] static Document parseHTML(DOMString html, optional SetHTMLOptions options = {});
 
     [SameObject, ImplementedAs=fragmentDirectiveForBindings, EnabledBySetting=ScrollToTextFragmentFeatureDetectionEnabled] readonly attribute FragmentDirective fragmentDirective;
     [SameObject] readonly attribute DOMImplementation implementation;

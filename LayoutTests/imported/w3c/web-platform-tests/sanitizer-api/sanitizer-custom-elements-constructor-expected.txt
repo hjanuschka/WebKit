@@ -1,17 +1,16 @@
 
-FAIL setHTML blocks CE constructor when element is dropped by explicit sanitizer config (removeElements) target.setHTML is not a function. (In 'target.setHTML(`<${tag}></${tag}>`, { sanitizer })', 'target.setHTML' is undefined)
-FAIL setHTML blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (removeElements) target.setHTML is not a function. (In 'target.setHTML(`<${tag}></${tag}>`, { sanitizer })', 'target.setHTML' is undefined)
-FAIL setHTML blocks CE constructor when element is dropped by explicit sanitizer config (allowElements) target.setHTML is not a function. (In 'target.setHTML(`<${tag}></${tag}>`, { sanitizer })', 'target.setHTML' is undefined)
-FAIL setHTML blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (allowElements) target.setHTML is not a function. (In 'target.setHTML(`<${tag}></${tag}>`, { sanitizer })', 'target.setHTML' is undefined)
-FAIL setHTML blocks CE constructor when element is dropped by explicit sanitizer config (replaceWithChildrenElements) target.setHTML is not a function. (In 'target.setHTML(`<${tag}></${tag}>`, { sanitizer })', 'target.setHTML' is undefined)
-FAIL setHTML blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (replaceWithChildrenElements) target.setHTML is not a function. (In 'target.setHTML(`<${tag}></${tag}>`, { sanitizer })', 'target.setHTML' is undefined)
+PASS setHTML blocks CE constructor when element is dropped by explicit sanitizer config (removeElements)
+PASS setHTML blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (removeElements)
+PASS setHTML blocks CE constructor when element is dropped by explicit sanitizer config (allowElements)
+PASS setHTML blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (allowElements)
+PASS setHTML blocks CE constructor when element is dropped by explicit sanitizer config (replaceWithChildrenElements)
+PASS setHTML blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (replaceWithChildrenElements)
 FAIL setHTMLUnsafe blocks CE constructor when element is dropped by explicit sanitizer config (removeElements) assert_equals: expected "" but got "<disallowed-element></disallowed-element>"
 FAIL setHTMLUnsafe blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (removeElements) assert_equals: expected "" but got "<disallowed-element-scoped></disallowed-element-scoped>"
 FAIL setHTMLUnsafe blocks CE constructor when element is dropped by explicit sanitizer config (allowElements) assert_equals: expected "" but got "<disallowed-element></disallowed-element>"
 FAIL setHTMLUnsafe blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (allowElements) assert_equals: expected "" but got "<disallowed-element-scoped></disallowed-element-scoped>"
 FAIL setHTMLUnsafe blocks CE constructor when element is dropped by explicit sanitizer config (replaceWithChildrenElements) assert_equals: expected "" but got "<disallowed-element></disallowed-element>"
 FAIL setHTMLUnsafe blocks CE constructor in scoped registry when element is dropped by explicit sanitizer config (replaceWithChildrenElements) assert_equals: expected "" but got "<disallowed-element-scoped></disallowed-element-scoped>"
-FAIL setHTML constructs an allowed CE from the scoped registry shadow[method] is not a function. (In 'shadow[method]("<disallowed-element-scoped></disallowed-element-scoped>",
-      { sanitizer: { elements: ["disallowed-element-scoped"] } })', 'shadow[method]' is undefined)
+PASS setHTML constructs an allowed CE from the scoped registry
 PASS setHTMLUnsafe constructs an allowed CE from the scoped registry
 

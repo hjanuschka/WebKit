@@ -28,4 +28,9 @@
 interface mixin NonDocumentTypeChildNode {
     readonly attribute Element? previousElementSibling;
     readonly attribute Element? nextElementSibling;
+
+    // https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#html-insertion-methods
+    [CEReactions=Needed, EnabledBySetting=SanitizerAPIEnabled] undefined beforeHTML(DOMString html, optional SetHTMLOptions options = {});
+    [CEReactions=Needed, EnabledBySetting=SanitizerAPIEnabled] undefined afterHTML(DOMString html, optional SetHTMLOptions options = {});
+    [CEReactions=Needed, EnabledBySetting=SanitizerAPIEnabled] undefined replaceWithHTML(DOMString html, optional SetHTMLOptions options = {});
 };

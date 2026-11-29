@@ -54,6 +54,7 @@
 #include "HTMLMediaElement.h"
 #include "HTMLSlotElement.h"
 #include "HTMLStyleElement.h"
+#include "HTMLTemplateElement.h"
 #include "InputEvent.h"
 #include "InspectorInstrumentation.h"
 #include "JSNodeCustom.h"
@@ -78,6 +79,8 @@
 #include "RenderTextControl.h"
 #include "RenderTreeUpdater.h"
 #include "RenderView.h"
+#include "SetHTMLOptions.h"
+#include "ShadowRoot.h"
 #include "SVGElementInlines.h"
 #include "ScopedEventQueue.h"
 #include "ScriptDisallowedScope.h"
@@ -95,6 +98,7 @@
 #include "WheelEvent.h"
 #include "XMLNSNames.h"
 #include "XMLNames.h"
+#include "markup.h"
 #include <JavaScriptCore/HeapInlines.h>
 #include <wtf/HexNumber.h>
 #include <wtf/SHA1.h>
@@ -726,6 +730,59 @@ ExceptionOr<void> Node::replaceWith(FixedVector<NodeOrString>&& nodeOrStringVect
     if (RefPtr node = result.releaseReturnValue())
         return parent->insertBefore(*node, WTF::move(viableNextSibling));
     return { };
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#parent-for-html-insertion
+ExceptionOr<RefPtr<ContainerNode>> Node::parentForHTMLInsertion()
+{
+    RefPtr parent = parentNode();
+    if (!parent)
+        return RefPtr<ContainerNode> { };
+    if (is<HTMLTemplateElement>(*parent))
+        return Exception { ExceptionCode::HierarchyRequestError };
+    if (is<Element>(*parent))
+        return parent;
+    if (RefPtr fragment = dynamicDowncast<DocumentFragment>(*parent)) {
+        if (is<ShadowRoot>(*fragment) || is<TemplateContentDocumentFragment>(*fragment))
+            return parent;
+    }
+    return Exception { ExceptionCode::HierarchyRequestError };
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-ndtcn-beforehtml
+ExceptionOr<void> Node::beforeHTML(String&& html, SetHTMLOptions&& options)
+{
+    auto parentOrException = parentForHTMLInsertion();
+    if (parentOrException.hasException())
+        return parentOrException.releaseException();
+    RefPtr parent = parentOrException.releaseReturnValue();
+    if (!parent)
+        return { };
+    return filterAndPreInsertHTML(*parent, this, html, WTF::move(options));
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-ndtcn-afterhtml
+ExceptionOr<void> Node::afterHTML(String&& html, SetHTMLOptions&& options)
+{
+    auto parentOrException = parentForHTMLInsertion();
+    if (parentOrException.hasException())
+        return parentOrException.releaseException();
+    RefPtr parent = parentOrException.releaseReturnValue();
+    if (!parent)
+        return { };
+    return filterAndPreInsertHTML(*parent, protect(nextSibling()).get(), html, WTF::move(options));
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-ndtcn-replacewithhtml
+ExceptionOr<void> Node::replaceWithHTML(String&& html, SetHTMLOptions&& options)
+{
+    auto parentOrException = parentForHTMLInsertion();
+    if (parentOrException.hasException())
+        return parentOrException.releaseException();
+    RefPtr parent = parentOrException.releaseReturnValue();
+    if (!parent)
+        return { };
+    return filterAndReplaceWithHTML(*parent, *this, html, WTF::move(options));
 }
 
 ExceptionOr<void> Node::remove()

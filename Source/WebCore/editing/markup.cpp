@@ -97,17 +97,20 @@
 #include "RenderBlock.h"
 #include "RenderElementInlines.h"
 #include "RenderObjectStyle.h"
+#include "SetHTMLOptions.h"
 #include "SVGAnimationElement.h"
 #include "SVGElementTypeHelpers.h"
 #include "SVGForeignObjectElement.h"
 #include "SVGNames.h"
 #include "SVGStyleElement.h"
 #include "SVGUseElement.h"
+#include "Sanitizer.h"
 #include "ScriptElement.h"
 #include "ScriptWrappableInlines.h"
 #include "Settings.h"
 #include "SocketProvider.h"
 #include "StylePropertiesInlines.h"
+#include "TemplateContentDocumentFragment.h"
 #include "TextIterator.h"
 #include "TextManipulationController.h"
 #include "TrustedType.h"
@@ -1650,6 +1653,85 @@ static ALWAYS_INLINE ExceptionOr<Ref<DocumentFragment>> createFragmentForMarkup(
 ExceptionOr<Ref<DocumentFragment>> createFragmentForInnerOuterHTML(Element& contextElement, const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy, CustomElementRegistry* registry, Element::CustomElementRegistryKind registryKind, RefPtr<ParserSanitizerConfiguration>&& sanitizer)
 {
     return createFragmentForMarkup(contextElement, markup, DocumentFragmentMode::ReuseForInnerOuterHTML, parserContentPolicy, registry, registryKind, WTF::move(sanitizer));
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#determine-the-parser-context-element
+static RefPtr<Element> parserContextElementForHTMLInsertion(ContainerNode& target)
+{
+    if (auto* element = dynamicDowncast<Element>(target))
+        return element;
+    if (auto* shadowRoot = dynamicDowncast<ShadowRoot>(target))
+        return shadowRoot->host();
+    if (auto* fragment = dynamicDowncast<DocumentFragment>(target)) {
+        if (auto* templateContent = dynamicDowncast<TemplateContentDocumentFragment>(*fragment))
+            return const_cast<HTMLTemplateElement*>(templateContent->host());
+    }
+    return nullptr;
+}
+
+enum class HTMLInsertionMode : bool { Safe, Unsafe };
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#parse-html-for-insertion
+static ExceptionOr<RefPtr<DocumentFragment>> parseHTMLForInsertion(ContainerNode& target, const String& markup, HTMLInsertionMode mode, RefPtr<ParserSanitizerConfiguration>&& sanitizer, bool runScripts)
+{
+    RefPtr context = parserContextElementForHTMLInsertion(target);
+    if (!context)
+        return RefPtr<DocumentFragment> { };
+    if (mode == HTMLInsertionMode::Safe && isScriptElement(*context))
+        return RefPtr<DocumentFragment> { };
+    OptionSet<ParserContentPolicy> policy { ParserContentPolicy::AllowScriptingContent, ParserContentPolicy::AllowDeclarativeShadowRoots, ParserContentPolicy::AlwaysParseAsHTML };
+    if (runScripts)
+        policy.add(ParserContentPolicy::DoNotMarkAlreadyStarted);
+    auto fragment = createFragmentForMarkup(*context, markup, DocumentFragmentMode::New, policy, protect(CustomElementRegistry::registryForNodeOrTreeScope(target, target.treeScope())).get(), target.usesNullCustomElementRegistry() ? Element::CustomElementRegistryKind::Null : Element::CustomElementRegistryKind::Window, WTF::move(sanitizer));
+    if (fragment.hasException())
+        return fragment.releaseException();
+    return RefPtr<DocumentFragment> { fragment.releaseReturnValue() };
+}
+
+static ExceptionOr<void> filterAndPreInsertHTMLWithConfiguration(ContainerNode& parent, Node* refChild, const String& markup, HTMLInsertionMode mode, RefPtr<ParserSanitizerConfiguration>&& sanitizer, bool runScripts)
+{
+    if (is<HTMLHtmlElement>(parent))
+        return Exception { ExceptionCode::HierarchyRequestError };
+    auto fragment = parseHTMLForInsertion(parent, markup, mode, WTF::move(sanitizer), runScripts);
+    if (fragment.hasException())
+        return fragment.releaseException();
+    RefPtr result = fragment.releaseReturnValue();
+    if (!result)
+        return { };
+    return parent.insertBefore(*result, RefPtr { refChild });
+}
+
+static ExceptionOr<void> filterAndReplaceWithHTMLWithConfiguration(ContainerNode& parent, Node& node, const String& markup, HTMLInsertionMode mode, RefPtr<ParserSanitizerConfiguration>&& sanitizer, bool runScripts)
+{
+    if (is<HTMLHtmlElement>(parent))
+        return Exception { ExceptionCode::HierarchyRequestError };
+    auto fragment = parseHTMLForInsertion(parent, markup, mode, WTF::move(sanitizer), runScripts);
+    if (fragment.hasException())
+        return fragment.releaseException();
+    RefPtr result = fragment.releaseReturnValue();
+    if (!result)
+        return { };
+    return parent.replaceChild(*result, node);
+}
+
+ExceptionOr<void> filterAndPreInsertHTML(ContainerNode& parent, Node* refChild, const String& markup, SetHTMLOptions&& options)
+{
+    if (is<HTMLHtmlElement>(parent))
+        return Exception { ExceptionCode::HierarchyRequestError };
+    auto sanitizer = Sanitizer::parserConfigurationFromOptions(WTF::move(options.sanitizer), true);
+    if (sanitizer.hasException())
+        return sanitizer.releaseException();
+    return filterAndPreInsertHTMLWithConfiguration(parent, refChild, markup, HTMLInsertionMode::Safe, sanitizer.releaseReturnValue(), false);
+}
+
+ExceptionOr<void> filterAndReplaceWithHTML(ContainerNode& parent, Node& node, const String& markup, SetHTMLOptions&& options)
+{
+    if (is<HTMLHtmlElement>(parent))
+        return Exception { ExceptionCode::HierarchyRequestError };
+    auto sanitizer = Sanitizer::parserConfigurationFromOptions(WTF::move(options.sanitizer), true);
+    if (sanitizer.hasException())
+        return sanitizer.releaseException();
+    return filterAndReplaceWithHTMLWithConfiguration(parent, node, markup, HTMLInsertionMode::Safe, sanitizer.releaseReturnValue(), false);
 }
 
 RefPtr<DocumentFragment> createFragmentForTransformToFragment(Document& outputDoc, String&& sourceString, const String& sourceMIMEType)

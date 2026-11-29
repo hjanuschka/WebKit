@@ -137,6 +137,7 @@
 #include "RenderView.h"
 #include "RenderWidgetInlines.h"
 #include "ResolvedStyle.h"
+#include "SetHTMLOptions.h"
 #include "SVGDocumentExtensions.h"
 #include "SVGElementTypeHelpers.h"
 #include "SVGNames.h"
@@ -4635,7 +4636,7 @@ void Element::enqueueSecurityPolicyViolationEvent(SecurityPolicyViolationEventIn
     });
 }
 
-ExceptionOr<void> Element::replaceChildrenWithMarkup(const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy)
+ExceptionOr<void> Element::replaceChildrenWithMarkup(const String& markup, OptionSet<ParserContentPolicy> parserContentPolicy, RefPtr<ParserSanitizerConfiguration>&& sanitizer)
 {
     auto policy = OptionSet<ParserContentPolicy> { ParserContentPolicy::AllowScriptingContent } | parserContentPolicy;
 
@@ -4653,7 +4654,7 @@ ExceptionOr<void> Element::replaceChildrenWithMarkup(const String& markup, Optio
         return { };
     }
 
-    auto fragment = createFragmentForInnerOuterHTML(*this, markup, policy, protect(CustomElementRegistry::registryForNodeOrTreeScope(container, container->treeScope())), container->usesNullCustomElementRegistry() ? CustomElementRegistryKind::Null : CustomElementRegistryKind::Window);
+    auto fragment = createFragmentForInnerOuterHTML(*this, markup, policy, protect(CustomElementRegistry::registryForNodeOrTreeScope(container, container->treeScope())), container->usesNullCustomElementRegistry() ? CustomElementRegistryKind::Null : CustomElementRegistryKind::Window, WTF::move(sanitizer));
     if (fragment.hasException())
         return fragment.releaseException();
 
@@ -4662,6 +4663,42 @@ ExceptionOr<void> Element::replaceChildrenWithMarkup(const String& markup, Optio
     if (!result.hasException() && usedFastPath)
         protect(document())->updateCachedSetInnerHTML(markup, container.get(), *this);
     return result;
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#target-for-html-insertion
+ContainerNode& Element::targetForHTMLInsertion()
+{
+    if (auto* templateElement = dynamicDowncast<HTMLTemplateElement>(*this))
+        return templateElement->content();
+    return *this;
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-element-sethtml
+ExceptionOr<void> Element::setHTML(String&& html, SetHTMLOptions&& options)
+{
+    // https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#parse-html-for-insertion
+    if (isScriptElement(*this))
+        return { };
+
+    auto sanitizerOrException = Sanitizer::parserConfigurationFromOptions(WTF::move(options.sanitizer), true);
+    if (sanitizerOrException.hasException())
+        return sanitizerOrException.releaseException();
+
+    return replaceChildrenWithMarkup(html, { ParserContentPolicy::AllowDeclarativeShadowRoots, ParserContentPolicy::AlwaysParseAsHTML }, sanitizerOrException.releaseReturnValue());
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-element-appendhtml
+ExceptionOr<void> Element::appendHTML(String&& html, SetHTMLOptions&& options)
+{
+    Ref target = targetForHTMLInsertion();
+    return filterAndPreInsertHTML(target, nullptr, html, WTF::move(options));
+}
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-element-prependhtml
+ExceptionOr<void> Element::prependHTML(String&& html, SetHTMLOptions&& options)
+{
+    Ref target = targetForHTMLInsertion();
+    return filterAndPreInsertHTML(target, protect(target->firstChild()).get(), html, WTF::move(options));
 }
 
 ExceptionOr<void> Element::setHTMLUnsafe(Variant<Ref<TrustedHTML>, String>&& html)

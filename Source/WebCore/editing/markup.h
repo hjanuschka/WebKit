@@ -54,6 +54,7 @@ class QualifiedName;
 class VisibleSelection;
 
 struct PresentationSize;
+struct SetHTMLOptions;
 struct SimpleRange;
 
 template<typename> class ExceptionOr;
@@ -90,6 +91,11 @@ WEBCORE_EXPORT Ref<DocumentFragment> createFragmentFromMarkup(Document&, const S
 ExceptionOr<Ref<DocumentFragment>> createFragmentForInnerOuterHTML(Element&, const String& markup, OptionSet<ParserContentPolicy>, CustomElementRegistry*, Element::CustomElementRegistryKind = Element::CustomElementRegistryKind::Window, RefPtr<ParserSanitizerConfiguration>&& = nullptr);
 RefPtr<DocumentFragment> createFragmentForTransformToFragment(Document&, String&& sourceString, const String& sourceMIMEType);
 Ref<DocumentFragment> createFragmentForImageAndURL(Document&, const String&, PresentationSize preferredSize);
+
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#filter-and-pre-insert-html
+ExceptionOr<void> filterAndPreInsertHTML(ContainerNode& parent, Node* refChild, const String& markup, SetHTMLOptions&&);
+// https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#filter-and-replace-with-html
+ExceptionOr<void> filterAndReplaceWithHTML(ContainerNode& parent, Node&, const String& markup, SetHTMLOptions&&);
 ExceptionOr<Ref<DocumentFragment>> createContextualFragment(Element&, const String& markup, OptionSet<ParserContentPolicy>, RefPtr<ParserSanitizerConfiguration>&& = nullptr);
 
 bool isPlainTextMarkup(Node*);

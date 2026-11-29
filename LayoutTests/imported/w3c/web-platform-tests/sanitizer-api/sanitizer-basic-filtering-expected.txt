@@ -1,356 +1,356 @@
 
-FAIL setHTML testcase text/0, "text" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase text/0, "text"
 PASS setHTMLUnsafe testcase text/0, "text"
-FAIL ShadowRoot.setHTML testcase text/0, "text" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase text/0, "text"
 PASS ShadowRoot.setHTMLUnsafe testcase text/0, "text"
-FAIL parseHTML testcase text/0, "text" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase text/0, "text"
 PASS parseHTMLUnsafe testcase text/0, "text"
-FAIL setHTML testcase elements/0, "<div><p>Hello <b>World!</b>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase elements/0, "<div><p>Hello <b>World!</b>"
 PASS setHTMLUnsafe testcase elements/0, "<div><p>Hello <b>World!</b>"
-FAIL ShadowRoot.setHTML testcase elements/0, "<div><p>Hello <b>World!</b>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase elements/0, "<div><p>Hello <b>World!</b>"
 PASS ShadowRoot.setHTMLUnsafe testcase elements/0, "<div><p>Hello <b>World!</b>"
-FAIL parseHTML testcase elements/0, "<div><p>Hello <b>World!</b>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase elements/0, "<div><p>Hello <b>World!</b>"
 PASS parseHTMLUnsafe testcase elements/0, "<div><p>Hello <b>World!</b>"
-FAIL setHTML testcase elements/1, "<div><p>Hello <b>World!</b>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase elements/1, "<div><p>Hello <b>World!</b>"
 FAIL setHTMLUnsafe testcase elements/1, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase elements/1, "<div><p>Hello <b>World!</b>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase elements/1, "<div><p>Hello <b>World!</b>"
 FAIL ShadowRoot.setHTMLUnsafe testcase elements/1, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase elements/1, "<div><p>Hello <b>World!</b>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase elements/1, "<div><p>Hello <b>World!</b>"
 FAIL parseHTMLUnsafe testcase elements/1, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase elements/2, "<div><p>Hello <b>World!</b>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase elements/2, "<div><p>Hello <b>World!</b>"
 FAIL setHTMLUnsafe testcase elements/2, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase elements/2, "<div><p>Hello <b>World!</b>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase elements/2, "<div><p>Hello <b>World!</b>"
 FAIL ShadowRoot.setHTMLUnsafe testcase elements/2, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase elements/2, "<div><p>Hello <b>World!</b>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase elements/2, "<div><p>Hello <b>World!</b>"
 FAIL parseHTMLUnsafe testcase elements/2, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase elements/3, "<div><p>Hello <b>World!</b>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase elements/3, "<div><p>Hello <b>World!</b>"
 FAIL setHTMLUnsafe testcase elements/3, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase elements/3, "<div><p>Hello <b>World!</b>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase elements/3, "<div><p>Hello <b>World!</b>"
 FAIL ShadowRoot.setHTMLUnsafe testcase elements/3, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase elements/3, "<div><p>Hello <b>World!</b>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase elements/3, "<div><p>Hello <b>World!</b>"
 FAIL parseHTMLUnsafe testcase elements/3, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase elements/4, "<div><p>Hello <b>World!</b>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase elements/4, "<div><p>Hello <b>World!</b>"
 FAIL setHTMLUnsafe testcase elements/4, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase elements/4, "<div><p>Hello <b>World!</b>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase elements/4, "<div><p>Hello <b>World!</b>"
 FAIL ShadowRoot.setHTMLUnsafe testcase elements/4, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase elements/4, "<div><p>Hello <b>World!</b>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase elements/4, "<div><p>Hello <b>World!</b>"
 FAIL parseHTMLUnsafe testcase elements/4, "<div><p>Hello <b>World!</b>" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase attributes/0, "<p id="hello" style="font-weight: bold">x" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase attributes/0, "<p id="hello" style="font-weight: bold">x"
 PASS setHTMLUnsafe testcase attributes/0, "<p id="hello" style="font-weight: bold">x"
-FAIL ShadowRoot.setHTML testcase attributes/0, "<p id="hello" style="font-weight: bold">x" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase attributes/0, "<p id="hello" style="font-weight: bold">x"
 PASS ShadowRoot.setHTMLUnsafe testcase attributes/0, "<p id="hello" style="font-weight: bold">x"
-FAIL parseHTML testcase attributes/0, "<p id="hello" style="font-weight: bold">x" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase attributes/0, "<p id="hello" style="font-weight: bold">x"
 PASS parseHTMLUnsafe testcase attributes/0, "<p id="hello" style="font-weight: bold">x"
-FAIL setHTML testcase attributes/1, "<p id="hello" style="font-weight: bold">x" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase attributes/1, "<p id="hello" style="font-weight: bold">x"
 FAIL setHTMLUnsafe testcase attributes/1, "<p id="hello" style="font-weight: bold">x" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: <DIV> / <P>. expected true got false
-FAIL ShadowRoot.setHTML testcase attributes/1, "<p id="hello" style="font-weight: bold">x" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase attributes/1, "<p id="hello" style="font-weight: bold">x"
 FAIL ShadowRoot.setHTMLUnsafe testcase attributes/1, "<p id="hello" style="font-weight: bold">x" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object ShadowRoot] / <P>. expected true got false
-FAIL parseHTML testcase attributes/1, "<p id="hello" style="font-weight: bold">x" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase attributes/1, "<p id="hello" style="font-weight: bold">x"
 FAIL parseHTMLUnsafe testcase attributes/1, "<p id="hello" style="font-weight: bold">x" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <P>. expected true got false
-FAIL setHTML testcase attributes/2, "<p id="hello" style="font-weight: bold">x" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase attributes/2, "<p id="hello" style="font-weight: bold">x"
 FAIL setHTMLUnsafe testcase attributes/2, "<p id="hello" style="font-weight: bold">x" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: <DIV> / <P>. expected true got false
-FAIL ShadowRoot.setHTML testcase attributes/2, "<p id="hello" style="font-weight: bold">x" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase attributes/2, "<p id="hello" style="font-weight: bold">x"
 FAIL ShadowRoot.setHTMLUnsafe testcase attributes/2, "<p id="hello" style="font-weight: bold">x" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object ShadowRoot] / <P>. expected true got false
-FAIL parseHTML testcase attributes/2, "<p id="hello" style="font-weight: bold">x" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase attributes/2, "<p id="hello" style="font-weight: bold">x"
 FAIL parseHTMLUnsafe testcase attributes/2, "<p id="hello" style="font-weight: bold">x" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <P>. expected true got false
-FAIL setHTML testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">"
 FAIL setHTMLUnsafe testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">"
 FAIL ShadowRoot.setHTMLUnsafe testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">"
 FAIL parseHTMLUnsafe testcase attributes-per-element/0, "<div style="font-weight: bold" class="bourgeoisie">" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">"
 FAIL setHTMLUnsafe testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">"
 FAIL ShadowRoot.setHTMLUnsafe testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">"
 FAIL parseHTMLUnsafe testcase attributes-per-element/1, "<div style="font-weight: bold" class="bourgeoisie">" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase comments/0, "a <!-- comment --> b" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase comments/0, "a <!-- comment --> b"
 PASS setHTMLUnsafe testcase comments/0, "a <!-- comment --> b"
-FAIL ShadowRoot.setHTML testcase comments/0, "a <!-- comment --> b" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase comments/0, "a <!-- comment --> b"
 PASS ShadowRoot.setHTMLUnsafe testcase comments/0, "a <!-- comment --> b"
-FAIL parseHTML testcase comments/0, "a <!-- comment --> b" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase comments/0, "a <!-- comment --> b"
 PASS parseHTMLUnsafe testcase comments/0, "a <!-- comment --> b"
-FAIL setHTML testcase comments/1, "a <!-- comment --> b" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase comments/1, "a <!-- comment --> b"
 FAIL setHTMLUnsafe testcase comments/1, "a <!-- comment --> b" assert_true: [object Text].isEqual([object Text]) fails. Path: <DIV> / [object Text]. expected true got false
-FAIL ShadowRoot.setHTML testcase comments/1, "a <!-- comment --> b" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase comments/1, "a <!-- comment --> b"
 FAIL ShadowRoot.setHTMLUnsafe testcase comments/1, "a <!-- comment --> b" assert_true: [object Text].isEqual([object Text]) fails. Path: [object ShadowRoot] / [object Text]. expected true got false
-FAIL parseHTML testcase comments/1, "a <!-- comment --> b" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase comments/1, "a <!-- comment --> b"
 FAIL parseHTMLUnsafe testcase comments/1, "a <!-- comment --> b" assert_true: [object Text].isEqual([object Text]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / [object Text]. expected true got false
-FAIL setHTML testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">"
 PASS setHTMLUnsafe testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">"
-FAIL ShadowRoot.setHTML testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">"
 PASS ShadowRoot.setHTMLUnsafe testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">"
-FAIL parseHTML testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">"
 PASS parseHTMLUnsafe testcase dataAttributes/0, "<p data-x="1" data-y="2" data-z="3">"
-FAIL setHTML testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">"
 FAIL setHTMLUnsafe testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: <DIV> / <P>. expected true got false
-FAIL ShadowRoot.setHTML testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">"
 FAIL ShadowRoot.setHTMLUnsafe testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object ShadowRoot] / <P>. expected true got false
-FAIL parseHTML testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">"
 FAIL parseHTMLUnsafe testcase dataAttributes/1, "<p data-x="1" data-y="2" data-z="3">" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <P>. expected true got false
-FAIL setHTML testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">"
 FAIL setHTMLUnsafe testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: <DIV> / <P>. expected true got false
-FAIL ShadowRoot.setHTML testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">"
 FAIL ShadowRoot.setHTMLUnsafe testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object ShadowRoot] / <P>. expected true got false
-FAIL parseHTML testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">"
 FAIL parseHTMLUnsafe testcase dataAttributes/2, "<p data-x="1" data-y="2" data-z="3">" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <P>. expected true got false
-FAIL setHTML testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
 PASS setHTMLUnsafe testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
-FAIL ShadowRoot.setHTML testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
 PASS ShadowRoot.setHTMLUnsafe testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
-FAIL parseHTML testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
 PASS parseHTMLUnsafe testcase dataAttributes/3, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
-FAIL setHTML testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
 FAIL setHTMLUnsafe testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
 FAIL ShadowRoot.setHTMLUnsafe testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes
 FAIL parseHTMLUnsafe testcase dataAttributes/4, "<div data-="x"></div>": "data-" prefix with an empty suffix is still covered by dataAttributes assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase namespaces/0, "<svg><rect></svg><math><mi>x" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/0, "<svg><rect></svg><math><mi>x"
 PASS setHTMLUnsafe testcase namespaces/0, "<svg><rect></svg><math><mi>x"
-FAIL ShadowRoot.setHTML testcase namespaces/0, "<svg><rect></svg><math><mi>x" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/0, "<svg><rect></svg><math><mi>x"
 PASS ShadowRoot.setHTMLUnsafe testcase namespaces/0, "<svg><rect></svg><math><mi>x"
-FAIL parseHTML testcase namespaces/0, "<svg><rect></svg><math><mi>x" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/0, "<svg><rect></svg><math><mi>x"
 PASS parseHTMLUnsafe testcase namespaces/0, "<svg><rect></svg><math><mi>x"
-FAIL setHTML testcase namespaces/1, "<svg><rect>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/1, "<svg><rect>"
 FAIL setHTMLUnsafe testcase namespaces/1, "<svg><rect>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/1, "<svg><rect>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/1, "<svg><rect>"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/1, "<svg><rect>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase namespaces/1, "<svg><rect>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/1, "<svg><rect>"
 FAIL parseHTMLUnsafe testcase namespaces/1, "<svg><rect>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase namespaces/2, "<svg><rect>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/2, "<svg><rect>"
 PASS setHTMLUnsafe testcase namespaces/2, "<svg><rect>"
-FAIL ShadowRoot.setHTML testcase namespaces/2, "<svg><rect>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/2, "<svg><rect>"
 PASS ShadowRoot.setHTMLUnsafe testcase namespaces/2, "<svg><rect>"
-FAIL parseHTML testcase namespaces/2, "<svg><rect>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/2, "<svg><rect>"
 PASS parseHTMLUnsafe testcase namespaces/2, "<svg><rect>"
-FAIL setHTML testcase namespaces/3, "<svg><rect>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/3, "<svg><rect>"
 FAIL setHTMLUnsafe testcase namespaces/3, "<svg><rect>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/3, "<svg><rect>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/3, "<svg><rect>"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/3, "<svg><rect>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase namespaces/3, "<svg><rect>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/3, "<svg><rect>"
 FAIL parseHTMLUnsafe testcase namespaces/3, "<svg><rect>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase namespaces/4, "<math><mi>x" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/4, "<math><mi>x"
 FAIL setHTMLUnsafe testcase namespaces/4, "<math><mi>x" assert_true: [object MathMLMathElement].isEqual([object MathMLMathElement]) fails. Path: <DIV> / <math>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/4, "<math><mi>x" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/4, "<math><mi>x"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/4, "<math><mi>x" assert_true: [object MathMLMathElement].isEqual([object MathMLMathElement]) fails. Path: [object ShadowRoot] / <math>. expected true got false
-FAIL parseHTML testcase namespaces/4, "<math><mi>x" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/4, "<math><mi>x"
 FAIL parseHTMLUnsafe testcase namespaces/4, "<math><mi>x" assert_true: [object MathMLMathElement].isEqual([object MathMLMathElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <math>. expected true got false
-FAIL setHTML testcase namespaces/5, "<math><mi>x" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/5, "<math><mi>x"
 PASS setHTMLUnsafe testcase namespaces/5, "<math><mi>x"
-FAIL ShadowRoot.setHTML testcase namespaces/5, "<math><mi>x" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/5, "<math><mi>x"
 PASS ShadowRoot.setHTMLUnsafe testcase namespaces/5, "<math><mi>x"
-FAIL parseHTML testcase namespaces/5, "<math><mi>x" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/5, "<math><mi>x"
 PASS parseHTMLUnsafe testcase namespaces/5, "<math><mi>x"
-FAIL setHTML testcase namespaces/6, "<math><mi>x" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/6, "<math><mi>x"
 FAIL setHTMLUnsafe testcase namespaces/6, "<math><mi>x" assert_true: [object MathMLMathElement].isEqual([object MathMLMathElement]) fails. Path: <DIV> / <math>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/6, "<math><mi>x" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/6, "<math><mi>x"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/6, "<math><mi>x" assert_true: [object MathMLMathElement].isEqual([object MathMLMathElement]) fails. Path: [object ShadowRoot] / <math>. expected true got false
-FAIL parseHTML testcase namespaces/6, "<math><mi>x" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/6, "<math><mi>x"
 FAIL parseHTMLUnsafe testcase namespaces/6, "<math><mi>x" assert_true: [object MathMLMathElement].isEqual([object MathMLMathElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <math>. expected true got false
-FAIL setHTML testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 PASS setHTMLUnsafe testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
-FAIL ShadowRoot.setHTML testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 PASS ShadowRoot.setHTMLUnsafe testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
-FAIL parseHTML testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 PASS parseHTMLUnsafe testcase namespaces/7, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
-FAIL setHTML testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 FAIL setHTMLUnsafe testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 FAIL parseHTMLUnsafe testcase namespaces/8, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 FAIL setHTMLUnsafe testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">"
 FAIL parseHTMLUnsafe testcase namespaces/9, "<svg xml:space="default" xlink:href="about:blank" xmlns:foo="barspace">" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase namespaces/10, "<svg>Hello</svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/10, "<svg>Hello</svg>"
 FAIL setHTMLUnsafe testcase namespaces/10, "<svg>Hello</svg>" assert_true: [object SVGSVGElement].isEqual(null) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/10, "<svg>Hello</svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/10, "<svg>Hello</svg>"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/10, "<svg>Hello</svg>" assert_true: [object SVGSVGElement].isEqual(null) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase namespaces/10, "<svg>Hello</svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/10, "<svg>Hello</svg>"
 FAIL parseHTMLUnsafe testcase namespaces/10, "<svg>Hello</svg>" assert_true: [object SVGSVGElement].isEqual(null) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase namespaces/11, "<svg>Hello</svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/11, "<svg>Hello</svg>"
 PASS setHTMLUnsafe testcase namespaces/11, "<svg>Hello</svg>"
-FAIL ShadowRoot.setHTML testcase namespaces/11, "<svg>Hello</svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/11, "<svg>Hello</svg>"
 PASS ShadowRoot.setHTMLUnsafe testcase namespaces/11, "<svg>Hello</svg>"
-FAIL parseHTML testcase namespaces/11, "<svg>Hello</svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/11, "<svg>Hello</svg>"
 PASS parseHTMLUnsafe testcase namespaces/11, "<svg>Hello</svg>"
-FAIL setHTML testcase namespaces/12, "<math>Hello</math>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/12, "<math>Hello</math>"
 FAIL setHTMLUnsafe testcase namespaces/12, "<math>Hello</math>" assert_true: [object MathMLMathElement].isEqual(null) fails. Path: <DIV> / <math>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/12, "<math>Hello</math>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/12, "<math>Hello</math>"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/12, "<math>Hello</math>" assert_true: [object MathMLMathElement].isEqual(null) fails. Path: [object ShadowRoot] / <math>. expected true got false
-FAIL parseHTML testcase namespaces/12, "<math>Hello</math>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/12, "<math>Hello</math>"
 FAIL parseHTMLUnsafe testcase namespaces/12, "<math>Hello</math>" assert_true: [object MathMLMathElement].isEqual(null) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <math>. expected true got false
-FAIL setHTML testcase namespaces/13, "<math>Hello</math>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/13, "<math>Hello</math>"
 FAIL setHTMLUnsafe testcase namespaces/13, "<math>Hello</math>" assert_true: [object MathMLMathElement].isEqual(null) fails. Path: <DIV> / <math>. expected true got false
-FAIL ShadowRoot.setHTML testcase namespaces/13, "<math>Hello</math>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/13, "<math>Hello</math>"
 FAIL ShadowRoot.setHTMLUnsafe testcase namespaces/13, "<math>Hello</math>" assert_true: [object MathMLMathElement].isEqual(null) fails. Path: [object ShadowRoot] / <math>. expected true got false
-FAIL parseHTML testcase namespaces/13, "<math>Hello</math>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/13, "<math>Hello</math>"
 FAIL parseHTMLUnsafe testcase namespaces/13, "<math>Hello</math>" assert_true: [object MathMLMathElement].isEqual(null) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <math>. expected true got false
-FAIL setHTML testcase namespaces/14, "<math>Hello</math>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/14, "<math>Hello</math>"
 PASS setHTMLUnsafe testcase namespaces/14, "<math>Hello</math>"
-FAIL ShadowRoot.setHTML testcase namespaces/14, "<math>Hello</math>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/14, "<math>Hello</math>"
 PASS ShadowRoot.setHTMLUnsafe testcase namespaces/14, "<math>Hello</math>"
-FAIL parseHTML testcase namespaces/14, "<math>Hello</math>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/14, "<math>Hello</math>"
 PASS parseHTMLUnsafe testcase namespaces/14, "<math>Hello</math>"
-FAIL setHTML testcase namespaces/15, "<p style="bla"></p>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/15, "<p style="bla"></p>"
 PASS setHTMLUnsafe testcase namespaces/15, "<p style="bla"></p>"
-FAIL ShadowRoot.setHTML testcase namespaces/15, "<p style="bla"></p>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/15, "<p style="bla"></p>"
 PASS ShadowRoot.setHTMLUnsafe testcase namespaces/15, "<p style="bla"></p>"
-FAIL parseHTML testcase namespaces/15, "<p style="bla"></p>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/15, "<p style="bla"></p>"
 PASS parseHTMLUnsafe testcase namespaces/15, "<p style="bla"></p>"
-FAIL setHTML testcase namespaces/16, "<p href="bla"></p>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase namespaces/16, "<p href="bla"></p>"
 PASS setHTMLUnsafe testcase namespaces/16, "<p href="bla"></p>"
-FAIL ShadowRoot.setHTML testcase namespaces/16, "<p href="bla"></p>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase namespaces/16, "<p href="bla"></p>"
 PASS ShadowRoot.setHTMLUnsafe testcase namespaces/16, "<p href="bla"></p>"
-FAIL parseHTML testcase namespaces/16, "<p href="bla"></p>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase namespaces/16, "<p href="bla"></p>"
 PASS parseHTMLUnsafe testcase namespaces/16, "<p href="bla"></p>"
-FAIL setHTML testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>"
 PASS setHTMLUnsafe testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>"
-FAIL ShadowRoot.setHTML testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>"
 PASS ShadowRoot.setHTMLUnsafe testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>"
-FAIL parseHTML testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>"
 PASS parseHTMLUnsafe testcase xlink-href-html-content/0, "<p xlink:href="bla"></p>"
-FAIL setHTML testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>"
 FAIL setHTMLUnsafe testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: <DIV> / <P>. expected true got false
-FAIL ShadowRoot.setHTML testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>"
 FAIL ShadowRoot.setHTMLUnsafe testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object ShadowRoot] / <P>. expected true got false
-FAIL parseHTML testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>"
 FAIL parseHTMLUnsafe testcase xlink-href-html-content/1, "<p xlink:href="bla"></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <P>. expected true got false
-FAIL setHTML testcase xlink-href-html-content/2, "<p href='bla'></p>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-html-content/2, "<p href='bla'></p>"
 FAIL setHTMLUnsafe testcase xlink-href-html-content/2, "<p href='bla'></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: <DIV> / <P>. expected true got false
-FAIL ShadowRoot.setHTML testcase xlink-href-html-content/2, "<p href='bla'></p>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-html-content/2, "<p href='bla'></p>"
 FAIL ShadowRoot.setHTMLUnsafe testcase xlink-href-html-content/2, "<p href='bla'></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object ShadowRoot] / <P>. expected true got false
-FAIL parseHTML testcase xlink-href-html-content/2, "<p href='bla'></p>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-html-content/2, "<p href='bla'></p>"
 FAIL parseHTMLUnsafe testcase xlink-href-html-content/2, "<p href='bla'></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <P>. expected true got false
-FAIL setHTML testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>"
 FAIL setHTMLUnsafe testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: <DIV> / <P>. expected true got false
-FAIL ShadowRoot.setHTML testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>"
 FAIL ShadowRoot.setHTMLUnsafe testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object ShadowRoot] / <P>. expected true got false
-FAIL parseHTML testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>"
 FAIL parseHTMLUnsafe testcase xlink-href-html-content/3, "<p xlink:href='bla'></p>" assert_true: [object HTMLParagraphElement].isEqual([object HTMLParagraphElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <P>. expected true got false
-FAIL setHTML testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>"
 FAIL setHTMLUnsafe testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>"
 FAIL ShadowRoot.setHTMLUnsafe testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>"
 FAIL parseHTMLUnsafe testcase xlink-href-foreign-content/0, "<svg xlink:href="bla"></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>"
 PASS setHTMLUnsafe testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>"
-FAIL ShadowRoot.setHTML testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>"
 PASS ShadowRoot.setHTMLUnsafe testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>"
-FAIL parseHTML testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>"
 PASS parseHTMLUnsafe testcase xlink-href-foreign-content/1, "<svg xlink:href="bla"></svg>"
-FAIL setHTML testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>"
 FAIL setHTMLUnsafe testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>"
 FAIL ShadowRoot.setHTMLUnsafe testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>"
 FAIL parseHTMLUnsafe testcase xlink-href-foreign-content/2, "<svg href='bla'></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>"
 FAIL setHTMLUnsafe testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>"
 FAIL ShadowRoot.setHTMLUnsafe testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>"
 FAIL parseHTMLUnsafe testcase xlink-href-foreign-content/3, "<svg xlink:href='bla'></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree
 PASS setHTMLUnsafe testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree
-FAIL ShadowRoot.setHTML testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree
 PASS ShadowRoot.setHTMLUnsafe testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree
-FAIL parseHTML testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree
 PASS parseHTMLUnsafe testcase xlink-href-foreign-content/4, "<svg><a xlink:href="bla"></a></svg>": Namespaced attribute xlink:href inside SVG tree
-FAIL setHTML testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx"
 FAIL setHTMLUnsafe testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx"
 FAIL ShadowRoot.setHTMLUnsafe testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx"
 FAIL parseHTMLUnsafe testcase defaults-with-attributes-per-element/0, "<div start=1 value=5 lang=en><ol start=1 value=5 lang=en><li start=1 value=5 lang=en>xx" assert_true: [object HTMLDivElement].isEqual([object HTMLDivElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>"
 PASS setHTMLUnsafe testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>"
-FAIL ShadowRoot.setHTML testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>"
 PASS ShadowRoot.setHTMLUnsafe testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>"
-FAIL parseHTML testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>"
 PASS parseHTMLUnsafe testcase mixed-case-element-names/0, "<svg><feBlend></feBlend></svg>"
-FAIL setHTML testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>"
 PASS setHTMLUnsafe testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>"
-FAIL ShadowRoot.setHTML testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>"
 PASS ShadowRoot.setHTMLUnsafe testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>"
-FAIL parseHTML testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>"
 PASS parseHTMLUnsafe testcase mixed-case-element-names/1, "<svg><feColorMatrix></feColorMatrix></svg>"
-FAIL setHTML testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>"
 PASS setHTMLUnsafe testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>"
-FAIL ShadowRoot.setHTML testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>"
 PASS ShadowRoot.setHTMLUnsafe testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>"
-FAIL parseHTML testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>"
 PASS parseHTMLUnsafe testcase mixed-case-element-names/2, "<svg><textPath></textPath></svg>"
-FAIL setHTML testcase element-name-case-mismatch/0, "<div>text</div>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase element-name-case-mismatch/0, "<div>text</div>"
 FAIL setHTMLUnsafe testcase element-name-case-mismatch/0, "<div>text</div>" assert_true: [object HTMLDivElement].isEqual(null) fails. Path: <DIV> / <DIV>. expected true got false
-FAIL ShadowRoot.setHTML testcase element-name-case-mismatch/0, "<div>text</div>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase element-name-case-mismatch/0, "<div>text</div>"
 FAIL ShadowRoot.setHTMLUnsafe testcase element-name-case-mismatch/0, "<div>text</div>" assert_true: [object HTMLDivElement].isEqual(null) fails. Path: [object ShadowRoot] / <DIV>. expected true got false
-FAIL parseHTML testcase element-name-case-mismatch/0, "<div>text</div>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase element-name-case-mismatch/0, "<div>text</div>"
 FAIL parseHTMLUnsafe testcase element-name-case-mismatch/0, "<div>text</div>" assert_true: [object HTMLDivElement].isEqual(null) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <DIV>. expected true got false
-FAIL setHTML testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>"
 FAIL setHTMLUnsafe testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>"
 FAIL ShadowRoot.setHTMLUnsafe testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>"
 FAIL parseHTMLUnsafe testcase element-name-case-mismatch/1, "<svg><feBlend></feBlend></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>"
 FAIL setHTMLUnsafe testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>"
 FAIL ShadowRoot.setHTMLUnsafe testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>"
 FAIL parseHTMLUnsafe testcase element-name-case-mismatch/2, "<svg><feBlend></feBlend></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 PASS setHTMLUnsafe testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
-FAIL ShadowRoot.setHTML testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 PASS ShadowRoot.setHTMLUnsafe testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
-FAIL parseHTML testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 PASS parseHTMLUnsafe testcase adjusted-svg-attribute-names/0, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
-FAIL setHTML testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 FAIL setHTMLUnsafe testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 FAIL ShadowRoot.setHTMLUnsafe testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 FAIL parseHTMLUnsafe testcase adjusted-svg-attribute-names/1, "<svg><marker viewbox="0 0 1 1"></marker></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>" div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 FAIL setHTMLUnsafe testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: <DIV> / <svg>. expected true got false
-FAIL ShadowRoot.setHTML testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>" shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 FAIL ShadowRoot.setHTMLUnsafe testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object ShadowRoot] / <svg>. expected true got false
-FAIL parseHTML testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>" Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>"
 FAIL parseHTMLUnsafe testcase adjusted-svg-attribute-names/2, "<svg><marker viewbox="0 0 1 1"></marker></svg>" assert_true: [object SVGSVGElement].isEqual([object SVGSVGElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <svg>. expected true got false
-FAIL setHTML testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names
 PASS setHTMLUnsafe testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names
-FAIL ShadowRoot.setHTML testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names
 PASS ShadowRoot.setHTMLUnsafe testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names
-FAIL parseHTML testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names
 PASS parseHTMLUnsafe testcase adjusted-svg-attribute-names/3, "<svg><marker viewbox="0 0 1 1" refx="1" markerwidth="2"></marker></svg>": Default config keeps case-adjusted SVG attribute names
-FAIL setHTML testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed. div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed.
 FAIL setHTMLUnsafe testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed. assert_true: [object HTMLUnknownElement].isEqual(null) fails. Path: <DIV> / <HELLO>. expected true got false
-FAIL ShadowRoot.setHTML testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed. shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed.
 FAIL ShadowRoot.setHTMLUnsafe testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed. assert_true: [object HTMLUnknownElement].isEqual(null) fails. Path: [object ShadowRoot] / <HELLO>. expected true got false
-FAIL parseHTML testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed. Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed.
 FAIL parseHTMLUnsafe testcase unknown/0, "<hello><world>": Unknown element names get blocked without being allowed. assert_true: [object HTMLUnknownElement].isEqual(null) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <HELLO>. expected true got false
-FAIL setHTML testcase unknown/1, "<hello><world>": Unknown element names pass when allowed. div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase unknown/1, "<hello><world>": Unknown element names pass when allowed.
 PASS setHTMLUnsafe testcase unknown/1, "<hello><world>": Unknown element names pass when allowed.
-FAIL ShadowRoot.setHTML testcase unknown/1, "<hello><world>": Unknown element names pass when allowed. shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase unknown/1, "<hello><world>": Unknown element names pass when allowed.
 PASS ShadowRoot.setHTMLUnsafe testcase unknown/1, "<hello><world>": Unknown element names pass when allowed.
-FAIL parseHTML testcase unknown/1, "<hello><world>": Unknown element names pass when allowed. Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase unknown/1, "<hello><world>": Unknown element names pass when allowed.
 PASS parseHTMLUnsafe testcase unknown/1, "<hello><world>": Unknown element names pass when allowed.
-FAIL setHTML testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed. div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed.
 FAIL setHTMLUnsafe testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed. assert_true: [object HTMLElement].isEqual([object HTMLElement]) fails. Path: <DIV> / <B>. expected true got false
-FAIL ShadowRoot.setHTML testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed. shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed.
 FAIL ShadowRoot.setHTMLUnsafe testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed. assert_true: [object HTMLElement].isEqual([object HTMLElement]) fails. Path: [object ShadowRoot] / <B>. expected true got false
-FAIL parseHTML testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed. Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed.
 FAIL parseHTMLUnsafe testcase unknown/2, "<b hello='1' world>": Unknown attribute names get blocked without being allowed. assert_true: [object HTMLElement].isEqual([object HTMLElement]) fails. Path: [object HTMLDocument] / <HTML> / <BODY> / <B>. expected true got false
-FAIL setHTML testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed. div.setHTML is not a function. (In 'div.setHTML(testcase.data, config)', 'div.setHTML' is undefined)
+PASS setHTML testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed.
 PASS setHTMLUnsafe testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed.
-FAIL ShadowRoot.setHTML testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed. shadowRoot .setHTML is not a function. (In 'shadowRoot .setHTML(testcase.data, config)', 'shadowRoot .setHTML' is undefined)
+PASS ShadowRoot.setHTML testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed.
 PASS ShadowRoot.setHTMLUnsafe testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed.
-FAIL parseHTML testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed. Document.parseHTML is not a function. (In 'Document.parseHTML(testcase.data, config)', 'Document.parseHTML' is undefined)
+PASS parseHTML testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed.
 PASS parseHTMLUnsafe testcase unknown/3, "<b hello='1' world>": Unknown attribute names pass when allowed.
 

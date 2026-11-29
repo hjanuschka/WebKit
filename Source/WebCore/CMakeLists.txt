@@ -1251,6 +1251,7 @@ set(WebCore_NON_SVG_IDL_FILES
     dom/SchedulerPostTaskOptions.idl
     dom/SecurityPolicyViolationEvent.idl
     dom/SecurityPolicyViolationEventDisposition.idl
+    dom/SetHTMLOptions.idl
     dom/ShadowRoot.idl
     dom/ShadowRootInit.idl
     dom/ShadowRootMode.idl

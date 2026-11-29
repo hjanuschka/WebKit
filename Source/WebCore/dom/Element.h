@@ -30,6 +30,7 @@
 #include <WebCore/EventOptions.h>
 #include <WebCore/FocusOptions.h>
 #include <WebCore/HitTestRequest.h>
+#include <WebCore/ParserSanitizerConfiguration.h>
 #include <WebCore/QualifiedName.h>
 #include <WebCore/RenderPtr.h>
 #include <WebCore/ScrollTypes.h>
@@ -150,6 +151,7 @@ struct ResizeObserverData;
 struct ScrollIntoViewOptions;
 struct ScrollToOptions;
 struct SecurityPolicyViolationEventInit;
+struct SetHTMLOptions;
 struct ShadowRootInit;
 
 using AnimatableCSSProperty = Variant<CSSPropertyID, AtomString>;
@@ -621,6 +623,10 @@ public:
     virtual void runFocusingStepsForAutofocus();
 
     ExceptionOr<void> setHTMLUnsafe(Variant<Ref<TrustedHTML>, String>&&);
+    ExceptionOr<void> setHTML(String&&, SetHTMLOptions&&);
+    ExceptionOr<void> appendHTML(String&&, SetHTMLOptions&&);
+    ExceptionOr<void> prependHTML(String&&, SetHTMLOptions&&);
+    ContainerNode& targetForHTMLInsertion();
     String getHTML(GetHTMLOptions&&) const;
 
     WEBCORE_EXPORT String innerHTML() const;
@@ -972,7 +978,7 @@ protected:
     void classAttributeChanged(const AtomString& newClassString, AttributeModificationReason);
     void partAttributeChanged(const AtomString& newValue);
 
-    ExceptionOr<void> replaceChildrenWithMarkup(const String&, OptionSet<ParserContentPolicy>);
+    ExceptionOr<void> replaceChildrenWithMarkup(const String&, OptionSet<ParserContentPolicy>, RefPtr<ParserSanitizerConfiguration>&& = nullptr);
 
     static ExceptionOr<void> mergeWithNextTextNode(Text&);
 

@@ -1628,6 +1628,7 @@ $(PROJECT_DIR)/dom/SchedulerPostTaskCallback.idl
 $(PROJECT_DIR)/dom/SchedulerPostTaskOptions.idl
 $(PROJECT_DIR)/dom/SecurityPolicyViolationEvent.idl
 $(PROJECT_DIR)/dom/SecurityPolicyViolationEventDisposition.idl
+$(PROJECT_DIR)/dom/SetHTMLOptions.idl
 $(PROJECT_DIR)/dom/ShadowRoot.idl
 $(PROJECT_DIR)/dom/ShadowRootInit.idl
 $(PROJECT_DIR)/dom/ShadowRootMode.idl

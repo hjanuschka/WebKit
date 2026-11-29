@@ -1298,6 +1298,7 @@ JS_BINDING_IDLS := \
     $(WebCore)/dom/SchedulerPostTaskOptions.idl \
     $(WebCore)/dom/SecurityPolicyViolationEvent.idl \
     $(WebCore)/dom/SecurityPolicyViolationEventDisposition.idl \
+    $(WebCore)/dom/SetHTMLOptions.idl \
     $(WebCore)/dom/ShadowRoot.idl \
     $(WebCore)/dom/ShadowRootInit.idl \
     $(WebCore)/dom/ShadowRootMode.idl \

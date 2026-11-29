@@ -5227,6 +5227,7 @@ JSServiceWorkerGlobalScope.cpp
 JSServiceWorkerRegistration.cpp @cost:3
 JSServiceWorkerUpdateViaCache.cpp
 JSServiceWorkerWindowClient.cpp
+JSSetHTMLOptions.cpp
 JSShadowRoot.cpp @cost:3
 JSShadowRootInit.cpp
 JSShadowRootMode.cpp

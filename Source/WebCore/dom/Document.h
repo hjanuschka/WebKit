@@ -322,6 +322,7 @@ struct IntersectionObserverData;
 struct OwnerPermissionsPolicyData;
 struct QuerySelectorResults;
 struct SecurityPolicyViolationEventInit;
+struct SetHTMLOptions;
 struct StartViewTransitionOptions;
 struct ViewTransitionParams;
 
@@ -549,6 +550,7 @@ public:
 
     void setMarkupUnsafe(const String&, OptionSet<ParserContentPolicy>, RefPtr<ParserSanitizerConfiguration>&& = nullptr);
     static ExceptionOr<Ref<Document>> parseHTMLUnsafe(Document&, Variant<Ref<TrustedHTML>, String>&&);
+    static ExceptionOr<Ref<Document>> parseHTML(Document&, String&&, SetHTMLOptions&&);
 
     RefPtr<ParserSanitizerConfiguration> takeParserSanitizerConfiguration();
 
